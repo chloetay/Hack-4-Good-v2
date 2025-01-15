@@ -39,6 +39,11 @@ export const Navbar = () => {
             <div>
               <Link href={"/listing"}>Marketplace</Link>
             </div>
+            {status === "authenticated" && (
+              <div>
+                <Link href={"/cart"}>My Cart</Link>
+              </div>
+            )}
             {status == "unauthenticated" && <SignInButton />}
             {/* Can have is admin if you want */}
             {/* Not implemented {status == "authenticated" && <MessageLogo />} */}
